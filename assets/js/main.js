@@ -14,8 +14,14 @@ navLinks.forEach(link => {
 const menu = document.getElementById('main-nav');
 const main = document.getElementById('main');
 const toggleMenuBtn = document.getElementById('toggle-menu-btn');
+const closeMenuBtn = document.getElementById('close-menu-btn');
 
 toggleMenuBtn.addEventListener('click', () => {
+    menu.classList.toggle('show-menu');
+    main.classList.toggle('show-menu');
+});
+
+closeMenuBtn.addEventListener('click', () => {
     menu.classList.toggle('show-menu');
     main.classList.toggle('show-menu');
 });

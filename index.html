@@ -18,6 +18,10 @@
                 <span class="nav__title">ADMIN</span>
             </a>
 
+            <div class="nav__close" id="close-menu-btn">
+                <i class="fa fa-bars nav__close-icon"></i>
+            </div>
+
             <ul class="nav__menu">
                 <li class="nav__item active-item">
                     <a href="#dashboard" class="nav__link">
@@ -67,6 +71,7 @@
 
     <!-- MAIN -->
     <main class="main show-menu" id="main">
+        <!-- TOP BAR -->
         <div class="topbar" id="topbar">
             <div class="topbar__toggle" id="toggle-menu-btn">
                 <i class="fa fa-bars topbar__toggle-icon"></i>
@@ -86,6 +91,245 @@
                 <span class="topbar__user-name">langde666</span>
             </div>
         </div>
+
+        <!-- OVERVIEW -->
+        <section class="section overview" id="overview">
+            <div class="card">
+                <div class="card__data">
+                    <span class="card__number">1,504</span>
+                    <span class="card__content">Daily Views</span>
+                </div>
+                <i class="fa fa-eye card__icon"></i>
+            </div>
+            <div class="card">
+                <div class="card__data">
+                    <span class="card__number">80</span>
+                    <span class="card__content">Sales</span>
+                </div>
+                <i class="fa fa-cart-shopping card__icon"></i>
+            </div>
+            <div class="card">
+                <div class="card__data">
+                    <span class="card__number">284</span>
+                    <span class="card__content">Comments</span>
+                </div>
+                <i class="fa fa-comments card__icon"></i>
+            </div>
+            <div class="card">
+                <div class="card__data">
+                    <span class="card__number">$7,842</span>
+                    <span class="card__content">Earning</span>
+                </div>
+                <i class="fa fa-money-bills card__icon"></i>
+            </div>
+        </section>
+
+        <!-- DATA -->
+        <section class="section data" id="data">
+            <!-- ORDERS -->
+            <div class="data__container order">
+                <div class="data__header">
+                    <h2 class="data__heading">Recent Orders</h2>
+                    <a href="#" class="data__all button button--link">View all</a>
+                </div>
+
+                <div style="overflow-x:auto;">
+                    <table class="data__table" id="table-order">
+                        <thead>
+                            <tr class="data__table-row data__table-row--header">
+                                <td>Name</td>
+                                <td>Price</td>
+                                <td>Payment</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="data__table-row">
+                                <td>U-shaped folding desk for students</td>
+                                <td>$170</td>
+                                <td>Paid</td>
+                                <td>
+                                    <span class="order-status order-status--delivered">Delivered</span>
+                                </td>
+                            </tr>
+                            <tr class="data__table-row">
+                                <td>God Father Book (Mario Puzo)</td>
+                                <td>$120</td>
+                                <td>Paid</td>
+                                <td>
+                                    <span class="order-status order-status--inprogress">In Progress</span>
+                                </td>
+                            </tr>
+                            <tr class="data__table-row">
+                                <td>Crayons Deli</td>
+                                <td>$43</td>
+                                <td>Due</td>
+                                <td>
+                                    <span class="order-status order-status--pending">Pending</span>
+                                </td>
+                            </tr>
+                            <tr class="data__table-row">
+                                <td>The Adventures of Huckleberry Finn</td>
+                                <td>$73</td>
+                                <td>Paid</td>
+                                <td>
+                                    <span class="order-status order-status--pending">Pending</span>
+                                </td>
+                            </tr>
+                            <tr class="data__table-row">
+                                <td>Haylou Solar LS05 smart watch global version</td>
+                                <td>$599</td>
+                                <td>Due</td>
+                                <td>
+                                    <span class="order-status order-status--delivered">Delivered</span>
+                                </td>
+                            </tr>
+                            <tr class="data__table-row">
+                                <td>EXAVP Premium Gaming Headset / DJ N62 LED</td>
+                                <td>$280</td>
+                                <td>Paid</td>
+                                <td>
+                                    <span class="order-status order-status--delivered">Delivered</span>
+                                </td>
+                            </tr>
+                            <tr class="data__table-row">
+                                <td>Bioderma Pink Cleansing Water for sensitive skin</td>
+                                <td>$369</td>
+                                <td>Paid</td>
+                                <td>
+                                    <span class="order-status order-status--return">Return</span>
+                                </td>
+                            </tr>
+                            <tr class="data__table-row">
+                                <td>Multi-tiered shoe rack made of natural bamboo wood</td>
+                                <td>$120</td>
+                                <td>Due</td>
+                                <td>
+                                    <span class="order-status order-status--inprogress">In Progress</span>
+                                </td>
+                            </tr>
+                            <tr class="data__table-row">
+                                <td>3CE Velvet Lip Tin</td>
+                                <td>$218</td>
+                                <td>Due</td>
+                                <td>
+                                    <span class="order-status order-status--inprogress">In Progress</span>
+                                </td>
+                            </tr>
+                            <tr class="data__table-row">
+                                <td>Men's - women's hair clips</td>
+                                <td>$20</td>
+                                <td>Paid</td>
+                                <td>
+                                    <span class="order-status order-status--delivered">Delivered</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- NEW CUSTOMERS -->
+            <div class="data__container customer">
+                <div class="data__header">
+                    <h2 class="data__heading">New Customers</h2>
+                    <a href="#" class="data__all button button--link">View all</a>
+                </div>
+
+                <div style="overflow-x:auto;">
+                    <table class="data__table" id="table-customer">
+                        <tr class="data__table-row data__table-row--bordernon data__table-row--hovernone">
+                            <td>
+                                <div class="customer-card">
+                                    <img src="/assets/img/customer_1.png" alt="customer_1" class="customer-card__img">
+                                    <div class="customer-card__info">
+                                        <h4 class="customer-card__name">Violet</h4>
+                                        <span class="customer-card__phace">Zaun</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="data__table-row data__table-row--bordernon data__table-row--hovernone">
+                            <td>
+                                <div class="customer-card">
+                                    <img src="/assets/img/customer_2.png" alt="customer_2" class="customer-card__img">
+                                    <div class="customer-card__info">
+                                        <h4 class="customer-card__name">Caitlyn</h4>
+                                        <span class="customer-card__phace">Piltover</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="data__table-row data__table-row--bordernon data__table-row--hovernone">
+                            <td>
+                                <div class="customer-card">
+                                    <img src="/assets/img/customer_3.png" alt="customer_3" class="customer-card__img">
+                                    <div class="customer-card__info">
+                                        <h4 class="customer-card__name">Jayce</h4>
+                                        <span class="customer-card__phace">Piltover</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="data__table-row data__table-row--bordernon data__table-row--hovernone">
+                            <td>
+                                <div class="customer-card">
+                                    <img src="/assets/img/customer_4.png" alt="customer_4" class="customer-card__img">
+                                    <div class="customer-card__info">
+                                        <h4 class="customer-card__name">Ekko</h4>
+                                        <span class="customer-card__phace">New Zaun</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="data__table-row data__table-row--bordernon data__table-row--hovernone">
+                            <td>
+                                <div class="customer-card">
+                                    <img src="/assets/img/customer_5.png" alt="customer_5" class="customer-card__img">
+                                    <div class="customer-card__info">
+                                        <h4 class="customer-card__name">Viktor</h4>
+                                        <span class="customer-card__phace">Zaun</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="data__table-row data__table-row--bordernon data__table-row--hovernone">
+                            <td>
+                                <div class="customer-card">
+                                    <img src="/assets/img/customer_6.png" alt="customer_6" class="customer-card__img">
+                                    <div class="customer-card__info">
+                                        <h4 class="customer-card__name">Mel</h4>
+                                        <span class="customer-card__phace">Noxus</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="data__table-row data__table-row--bordernon data__table-row--hovernone">
+                            <td>
+                                <div class="customer-card">
+                                    <img src="/assets/img/customer_7.png" alt="customer_7" class="customer-card__img">
+                                    <div class="customer-card__info">
+                                        <h4 class="customer-card__name">Heimerdinger</h4>
+                                        <span class="customer-card__phace">Bandle City</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="data__table-row data__table-row--bordernon data__table-row--hovernone">
+                        <td>
+                            <div class="customer-card">
+                                <img src="/assets/img/customer_8.png" alt="customer_8" class="customer-card__img">
+                                <div class="customer-card__info">
+                                    <h4 class="customer-card__name">Jinx</h4>
+                                    <span class="customer-card__phace">Zaun</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
     </main>
 
 
