@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="container">
+        <nav class="nav show-menu" id="main-nav">
+            <a href="#" class="nav__logo">
+                <i class="fa fa-at nav__logo-icon"></i>
+                <span class="nav__title">ADMIN</span>
+            </a>
+
+            <ul class="nav__menu">
+                <li class="nav__item active-item">
+                    <a href="#dashboard" class="nav__link">
+                        <i class="fa fa-house nav__icon"></i>
+                        <span class="nav__title">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        <i class="fa fa-user-group nav__icon"></i>
+                        <span class="nav__title">Customers</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        <i class="fa fa-comment nav__icon"></i>
+                        <span class="nav__title">Message</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        <i class="fa fa-question nav__icon"></i>
+                        <span class="nav__title">Help</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        <i class="fa fa-gear nav__icon"></i>
+                        <span class="nav__title">Setting</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        <i class="fa fa-lock nav__icon"></i>
+                        <span class="nav__title">Password</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        <i class="fa fa-arrow-right-from-bracket nav__icon"></i>
+                        <span class="nav__title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- MAIN -->
+    <main class="main show-menu" id="main">
+        <div class="topbar" id="topbar">
+            <div class="topbar__toggle" id="toggle-menu-btn">
+                <i class="fa fa-bars topbar__toggle-icon"></i>
+            </div>
+
+            <!-- SEARCH -->
+            <form action="" class="topbar__search">
+                <label for="#search" class="topbar__search-label">
+                    <input type="text" placeholder="Search..." class="topbar__search-input" id="search">
+                    <i class="fa fa-magnifying-glass topbar__search-icon"></i>
+                </label>
+            </form>
+
+            <!-- CURRENT USER -->
+            <div class="topbar__user">
+                <img src="./assets/img/user.png" alt="current-user-avatar" class="topbar__user-img">
+                <span class="topbar__user-name">langde666</span>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- MAIN JS -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

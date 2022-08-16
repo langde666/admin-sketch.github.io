@@ -1,0 +1,294 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans:wght@400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+/* VARIABLES */
+:root {
+    --main-nav-width: 300px;
+    --main-nav-width-s: 80px;
+    --main-topbar-height: 60px;
+    --main-topbar-search-width: 500px;
+
+    /* COLORS */
+    --grey-color-900: #202124;
+    --grey-color-700: #5f6368;
+    --grey-color-300: #dadce0;
+    --white-color: #fff;
+
+    --first-color: #297bff;
+    --first-color-alt: #0f65f0;
+    --first-color-lighter: #144799;
+    --body-color: var(--white-color);
+    --title-color: var(--grey-color-900);
+    --text-color: var(--grey-color-700);
+    --text-color-light: var(--white-color);
+    --background-color: var(--grey-color-300);
+
+    /* FONT AND TYPOGRAPHY */
+    --body-font: 'Ubuntu', sans-serif;
+    
+    --h1-font-size: 3rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+
+    --medium-font-weight: 500;
+    --semibold-font-weight: 600;
+    --bold-font-weight: 700; 
+
+    /* MARGENES:
+        .25rem = 4px, .5rem = 8px, .75rem = 12px, 1rem = 16px,
+        1.5rem = 24rem, 2rem = 32px, 2.5 = 40px, 3rem = 48px...
+    */
+    --m-0-25: .25rem;
+    --m-0-5: .5rem;
+    --m-0-75: .75rem;
+    --m-1: 1rem;
+    --m-1-5: 1.5rem;
+    --m-2: 2rem;
+    --m-2-5: 2.5rem;
+    --m-3: 3rem;
+
+    /* Z-INDEX */
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+@media screen and (min-width: 1024px) {
+    :root {
+        --h1-font-size: 5rem;
+        --h2-font-size: 2rem;
+        --normal-font-size: 1rem;
+    }
+}
+
+/* BASE */
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, ul, p {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--title-color);
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a, input {
+    text-decoration: none;
+    outline: none;
+    color: var(--text-color);
+}
+
+img {
+    max-width: 100%;
+}
+
+/* LAYOUT */
+.container {
+    position: relative;
+    width: 100%;
+}
+
+/* NAV */
+.nav {
+    position: fixed;
+    width: var(--main-nav-width-s);
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--first-color);
+    border-left: .75rem solid var(--first-color);
+    transition: .5s;
+}
+
+.nav.show-menu {
+    width: var(--main-nav-width);
+}
+
+.nav__logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: var(--m-2-5);
+    color: var(--white-color);
+    font-size: var(--h2-font-size);
+    font-weight: var(--semibold-font-weight);
+}
+
+.nav__logo-icon {
+    font-size: var(--h2-font-size);
+    margin-right: var(--m-1);
+}
+
+.nav__menu {
+    left: 0;
+    width: 100%;
+}
+
+.nav__item {
+    position: relative;
+    width: 100%;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.nav__item:hover,
+.nav__item.active-item {
+    background-color: var(--body-color);
+}
+
+.nav__link {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    color: var(--text-color-light);
+}
+
+.nav__item:hover .nav__link,
+.nav__item.active-item .nav__link {
+    color: var(--first-color);
+}
+
+.nav__icon {
+    font-size: 1.2rem;
+    min-width: 60px;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    display: block;
+    text-align: center;
+}
+
+.nav__title {
+    display: block;
+    padding: 0 1rem;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    text-align: start;
+    white-space: nowrap;
+}
+
+/* cursor outside */
+.nav__item:hover .nav__link::before,
+.nav__item:hover .nav__link::after,
+.nav__item.active-item .nav__link::before,
+.nav__item.active-item .nav__link::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute; 
+    right: 0;
+    background-color: transparent;
+    pointer-events: none;
+    user-select: none;
+}
+
+.nav__item:hover .nav__link::before,
+.nav__item.active-item .nav__link::before  {
+    top: -50px;
+    box-shadow: 36px 36px 0 10px var(--white-color);
+}
+
+.nav__item:hover .nav__link::after,
+.nav__item.active-item .nav__link::after {
+    bottom: -50px;
+    box-shadow: 36px -36px 0 10px var(--white-color);
+}
+
+/* MAIN */
+/* TOPBAR */
+.main {
+    position: relative;
+    width: calc(100% - var(--main-nav-width-s));
+    left: var(--main-nav-width-s);
+    min-height: 100%;
+    background-color: var(--body-color);
+    transition: .5s;
+}
+
+.main.show-menu {
+    left: var(--main-nav-width);
+    width: calc(100% - var(--main-nav-width));
+}
+
+.topbar {
+    width: 100%;
+    height: var(--main-topbar-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .75rem;
+}
+
+.topbar__toggle {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.topbar__toggle-icon {
+    font-size: 2rem;
+}
+
+.topbar__search {
+    margin: 0 var(--m-0-75);
+}
+
+.topbar__search-label {
+    position: relative;
+}
+
+.topbar__search-input {
+    width: var(--main-topbar-search-width);
+    height: calc(var(--main-topbar-height) * 2 / 3);
+    padding: .375rem 1.5rem .375rem 2.5rem;
+    border: none;
+    border-radius: 2.5rem;
+    background-color: var(--background-color);
+}
+
+.topbar__search-icon {
+    font-size: 1rem;
+    position: absolute;
+    left: 10px;
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+.topbar__user {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.topbar__user-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.topbar__user-name {
+    margin-left: .5rem;
+}
